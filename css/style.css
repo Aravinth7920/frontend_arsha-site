@@ -1,6 +1,7 @@
 *{
 padding:0%;
 margin:0%;
+box-sizing: border-box;
 }
 /*header section*/
 #header-container{
@@ -14,33 +15,47 @@ margin:0%;
   
   
 }
-#header-col1,#header-col3{width: 10%;align-content: center;text-align: center;color: white;margin-left: 5%;}
-#header-col2 ul{
-	display:flex;width:170%;margin-right: 50%;
-  justify-content: space-between;
- color: white;list-style-type: none;
+#header-col1,#header-col3{width: 10%;align-content: center;text-align: center;color: white;}
+#header-col2 ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  color: white;
+  padding: 0;
+  margin: 0;
+  width: 800px; 
 }
+#header-col2 ul li {
+  flex: 1;             
+  text-align: center;  
+}
+
 #header-btn{
   width: 90%;height: 30px;  border: 1px solid aqua;border-radius: 20px;background-color: aqua;
   
 }/*header section end*/
 /*poster section*/
 #poster-section{
- margin-top: 90px;
+ padding-top: 0px;
  height: 80vh;
 }
 #poster-container{
   background-color: rgb(9, 56, 87);width: 100%;
  height: 100%;
 }
-#poster-row{ display: flex;
-  justify-content:space-between;
-  width: 85%;margin-left: 15%; height: 100%;
+#poster-row {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;  
+  height: 100%;
 }
+
 .poster-col{width: 40%; height: 100%;justify-content:space-around;margin-top: 100px;
 }
 #poster-col-head{
-  margin-top: 200px;
+  padding-top: 200px;
 }
 #poster-hd2{
   color: white;font-size:60px;
@@ -49,16 +64,71 @@ margin:0%;
   color: gray;font-size: 25px;
 }
 #poster-col1-down{
-  margin-top: 10px;width: 80%;height: 40px;
+  padding-top: 10px;width: 80%;height: 40px;
   justify-content: space-evenly;
   display: flex;color: white
 }
 #poster-col1-down button{height: 30px;width: 30%;border: 1px solid aqua;background-color: aqua;color: white;
   font-size:15px;border-radius: 20px}
 /*poster section end*/
-#cta-section{
-  height: 100vh;width: 100%;;
+/*service section */
+
+#service-section{
+  height: 80vh;width: 100%;
+  background-color: rgb(223, 220, 218);
 }
+#service-row1{
+ width: 100%;height: 20vh;
+  text-align: center;
+}
+#service-row1 h2{
+  padding: 0px 0px 20px;margin: 0px 0px 20px;
+  color: rgb(30, 67, 109);font-size: 35px;
+}
+#service-row1 p{
+font-size: 20px;color: gray;
+}
+#service-row2{
+  width: 100%;
+  height: 65vh;display: flex;justify-content: space-evenly;
+  align-items: center;
+  padding: 0px 40px;
+}
+.service-col{
+  width: 18%;
+  height: 35vh;
+  background-color: white;text-align: center;
+}
+.service-col i,
+.service-col h4 {
+  display: block;
+  text-align: left;  
+  padding-left: 20px; 
+  padding-top: 30px;
+  color: rgb(30, 67, 109);
+}
+
+.service-col p {
+  padding: 10px 20px; 
+  text-align: left;  
+  font-size:medium;
+    
+}
+
+.service-col i{
+  font-size: 30px;color: aqua;
+}
+
+
+
+
+/*service section end*/
+
+#cta-section{
+  height: 100vh;width: 100%;
+
+}
+
 #container {
   width: 100%;
   height: 40vh;
@@ -83,3 +153,4 @@ margin:0%;
   text-decoration: none; 
   border-radius: 25px;    
 }
+
