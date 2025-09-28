@@ -4,14 +4,29 @@ margin:0%;
 box-sizing: border-box;
 }
 /*header section*/
-#header-container{
-	width:100%;height:15vh;background-color:gray;
-	align-content: center; background:rgba(0, 0, 0, 0.8);position: fixed;
-  top:0;left: 0;
+#header-container {
+  width: 100%;
+  height: 15vh;
+  background: rgba(65, 64, 64, 0.6); /* semi-transparent */
+  display: flex;
+  align-items: center;
+  justify-content:space-evenly;
+
+  position: fixed;   /* makes it stay on top */
+  top: 0;
+  left: 0;
+  z-index: 1000;     /* stays above everything */
+  backdrop-filter: blur(0px); /* optional: adds glass effect */
 }
+
+/* push down the rest of the page so header doesn’t overlap */
+#portfolio-section {
+  margin-top: 15vh; /* same as header height */
+}
+
 #header-row{
-	display:flex;
-  justify-content: space-between;
+	display:flex;width: 100%;
+  justify-content: space-evenly;
   
   
 }
@@ -30,7 +45,10 @@ box-sizing: border-box;
   flex: 1;             
   text-align: center;  
 }
-
+#header-col2 ul li:hover{
+  color: aqua;
+  cursor: pointer;
+}
 #header-btn{
   width: 90%;height: 30px;  border: 1px solid aqua;border-radius: 20px;background-color: aqua;
   
@@ -71,6 +89,37 @@ box-sizing: border-box;
 #poster-col1-down button{height: 30px;width: 30%;border: 1px solid aqua;background-color: aqua;color: white;
   font-size:15px;border-radius: 20px}
 /*poster section end*/
+#About-section{
+  height: 70vh;width: 100%;
+  background-color: rgb(223, 220, 218);
+}
+#About-row1{
+ width: 100%;height: 20vh;
+  text-align: center;padding-top: 10px;
+}
+#About-row1 h2{
+  padding: 0px 0px 20px;margin: 0px 0px 20px;
+  color: rgb(30, 67, 109);font-size: 35px;
+}
+#About-row2{
+  display: flex;width: 100%;
+  height: 50vh;
+}
+#About-row2-col1{
+  width: 100%;align-content: center;
+  justify-items: center;
+  display: block;
+}
+#About-row2-col1 ul{
+    list-style: none; 
+}
+#About-row2-col2{
+  width: 100%;align-content: center;
+  justify-items: center;
+  display: block;
+}
+#About-btn{height: 30px;width: 30%;border: 1px solid rgb(45, 133, 216);color: rgb(45, 133, 216);
+  font-size:15px;border-radius: 5px;}
 /*service section */
 
 #service-section{
@@ -121,11 +170,12 @@ font-size: 20px;color: gray;
 
 
 
-
 /*service section end*/
 
+/*call to action section */
+
 #cta-section{
-  height: 100vh;width: 100%;
+  height: 50vh;width: 100%;
 
 }
 
@@ -153,4 +203,130 @@ font-size: 20px;color: gray;
   text-decoration: none; 
   border-radius: 25px;    
 }
+/*call to action section end */
 
+/*portfolio section */
+#portfolio-section{
+   height: 170vh;width: 100%;
+     position: relative;
+  z-index: 1;
+  margin-top: 50px; /* add spacing below header */
+  overflow: hidden; /* stops children from overflowing */
+
+}
+#portfolio-row1{
+ width: 100%;height: 20vh;
+  text-align: center;
+}
+#portfolio-row1 h2{
+  padding: 0px 0px 20px;margin: 0px 0px 20px;
+  color: rgb(30, 67, 109);font-size: 35px;
+}
+#portfolio-row1 p{
+font-size: 20px;color: gray;
+}
+#portfolio-row2 ul{
+  display: flex;
+  padding: 0px 520px;
+  justify-content: space-around;  list-style: none; 
+}
+#portfolio-row2 ul li {
+   padding: 8px 16px;
+  cursor: pointer;
+  color: black;
+  transition: all 0.3s ease;
+}
+#portfolio-row2 ul li:hover {
+   color: #fff;   background-color: rgb(10, 133, 182);
+  border: 2px solid rgb(30, 67, 109); /* border on hover */
+  border-radius: 5px;    width: 100px;text-align: center;
+  height: 30px;align-items: center;
+}
+#portfolio-row3{
+  width: 100%;height:145vh ;
+  padding:10px 150px ;
+}.portfolio-img-pic img{
+   width: 100%;
+   height: 100%;object-fit: cover;
+  display: block;
+}
+#portfolio-row3 td img{
+  width: 100%;
+}
+.portfolio-img-pic{
+  width: 350px;
+  height: 200px; overflow: hidden;  position: relative;
+}
+.height1{
+  height: 400px;
+}
+
+.portfolio-info {
+  position: absolute;
+  left: 0;
+  bottom: -100%; 
+  width: 100%;
+  background: rgba(180, 176, 176, 0.7);
+  color: #000;
+  text-align: center;
+  padding: 15px; 
+}
+.portfolio-img-pic:hover .portfolio-info {
+  bottom: 0; 
+}
+/*portfolio section end*/
+
+/*Team section */
+
+#team-section{
+  height: 120vh;width: 100%;
+  background-color: rgb(255, 251, 248);
+}
+#team-row1{
+ width: 100%;height: 20vh;
+  text-align: center;
+}
+#team-row1 h2{
+  padding: 0px 0px 10px;margin: 0px 0px 20px;
+  color: rgb(30, 67, 109);font-size: 35px;
+}
+#team-row1 p{
+font-size: 20px;color: gray;
+}
+#team-row2{
+  width: 100%;
+  height: 100vh;
+  
+  display: flex;justify-content: space-around;
+}
+#team-row2 tr{
+   display: flex;justify-content: space-around;width: 1200px;height: 50vh;
+  align-items: center;
+}
+.member-border{
+  width: 100%;
+  margin: 10px 10px;
+  height: 35vh; display: flex;justify-content: space-around;
+  background-color: #fff;border: none;box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+.member-border img{
+  height: 80%;padding-top: 10px;
+  border-radius: 80px;
+}
+.member-info{
+  padding-top: 50px;
+}
+.member-contact{
+  padding-top: 30px;display: flex;justify-content: space-evenly;
+  width: 60%;
+}
+.member-contact i{
+  color:gray;border:1px solid gray;
+  padding: 5px;border-radius: 20px;
+}
+.member-contact i:hover{
+  color: rgb(66, 65, 65);
+  border:1px solid gray;
+  padding: 5px;border-radius: 10px;
+  color: white;background-color: rgb(60, 235, 235);
+}
