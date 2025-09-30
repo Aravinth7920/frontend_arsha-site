@@ -353,7 +353,8 @@ font-size: 20px;color: gray;
   width: 100%;
   margin: 10px 10px;border-radius: 10px;
   height: 35vh; display: flex;justify-content: space-around;
-  background-color: #fff;border: none;box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  background-color: #fff;border: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
    transition: transform 0.5s ease-in-out;
 }
 .member-border:hover{
